@@ -1,0 +1,198 @@
+{
+  "name": "RDX Auto Filter",
+  "description": "RDX-branded Telegram auto-filter bot with indexed search, thumbnail-preserving file delivery, streaming and premium access.",
+  "stack": "container",
+  "keywords": [
+    "telegram",
+    "auto-filter",
+    "filter",
+    "best",
+    "indian",
+    "pyrogram",
+    "media",
+    "search",
+    "channel",
+    "index",
+    "inline"
+  ],
+  "website": "https://t.me/rdxmovie_hd",
+  "repository": "https://github.com/Deendayal403/Deendayal_dhakad",
+  "env": {
+    "BOT_TOKEN": {
+      "description": "Your bot token.",
+      "required": true
+    },
+    "API_ID": {
+      "description": "Get this value from https://my.telegram.org",
+      "required": true
+    },
+    "API_HASH": {
+      "description": "Get this value from https://my.telegram.org",
+      "required": true
+    },
+    "CHANNELS": {
+      "description": "Username or ID of channel or group. Separate multiple IDs by space.",
+      "required": false
+    },
+    "ADMINS": {
+      "description": "Username or ID of Admin. Separate multiple Admins by space.",
+      "required": true
+    },
+    "PICS": {
+      "description": "Private /start poster. Accepts a local asset path or HTTPS image URL; separate multiple images by spaces.",
+      "value": "assets/rdx-welcome-banner.jpg",
+      "required": false
+    },
+    "NOR_IMG": {
+      "description": "No-results poster path or HTTPS URL.",
+      "value": "assets/rdx-no-results.jpg",
+      "required": false
+    },
+    "SPELL_IMG": {
+      "description": "Spell-check suggestion poster path or HTTPS URL.",
+      "value": "assets/rdx-no-results.jpg",
+      "required": false
+    },
+    "FSUB_PICS": {
+      "description": "Force-subscription poster path or HTTPS URL.",
+      "value": "assets/rdx-join-channel.jpg",
+      "required": false
+    },
+    "SUBSCRIPTION": {
+      "description": "Premium-plan poster path or HTTPS URL.",
+      "value": "assets/rdx-premium.jpg",
+      "required": false
+    },
+    "LOG_CHANNEL": {
+      "description": "Bot Logs,Give a channel id with -100xxxxxxx",
+      "required": true
+    },
+    "AUTH_USERS": {
+      "description": "Username or ID of users to give access of inline search. Separate multiple users by space.\nLeave it empty if you don't want to restrict bot usage.",
+      "required": false
+    },
+    "AUTH_CHANNEL": {
+      "description": "ID of channel.Make sure bot is admin in this channel. Without subscribing this channel users cannot use bot.",
+      "required": false
+    },
+    "DATABASE_URI": {
+      "description": "mongoDB URI. Get this value from https://www.mongodb.com.",
+      "required": true
+    },
+    "DATABASE_URI2": {
+      "description": "mongoDB URI. Get this value from https://www.mongodb.com.",
+      "required": true
+    },
+    "DATABASE_NAME": {
+      "description": "Name of the database in mongoDB.",
+      "required": false
+    },
+    "COLLECTION_NAME": {
+      "description": "Existing MongoDB collection name. Keep the old value when upgrading so indexed files remain available.",
+      "value": "Deendayal_files",
+      "required": false
+    },
+    "BRAND_NAME": {
+      "description": "Visible bot brand name.",
+      "value": "RDX AUTO FILTER",
+      "required": false
+    },
+    "BRAND_TAGLINE": {
+      "description": "Visible brand tagline.",
+      "value": "SEARCH • STREAM • DOWNLOAD",
+      "required": false
+    },
+    "START_ANIMATION": {
+      "description": "Enable or disable the private /start loader animation.",
+      "value": "True",
+      "required": false
+    },
+    "START_ANIMATION_STYLE": {
+      "description": "Start loader design: cinema, neon, or minimal.",
+      "value": "cinema",
+      "required": false
+    },
+    "VERIFY": {
+      "description": "Require a quick verification before free users download files.",
+      "value": "False",
+      "required": false
+    },
+    "VERIFY_ACCESS_HOURS": {
+      "description": "Number of hours a successful verification remains active.",
+      "value": "24",
+      "required": false
+    },
+    "VERIFY_TOKEN_MINUTES": {
+      "description": "Number of minutes a new verification link remains valid.",
+      "value": "15",
+      "required": false
+    },
+    "VERIFY_NOTICE_DELETE_SECONDS": {
+      "description": "Seconds before the verification-required message is deleted.",
+      "value": "180",
+      "required": false
+    },
+    "VERIFY_TIMEZONE": {
+      "description": "Timezone used when displaying verification expiry times.",
+      "value": "Asia/Kolkata",
+      "required": false
+    },
+    "VERIFY_POSTER": {
+      "description": "Verification-required poster path or HTTPS URL.",
+      "value": "assets/rdx-verification.jpg",
+      "required": false
+    },
+    "VERIFIED_POSTER": {
+      "description": "Successful-verification poster path or HTTPS URL.",
+      "value": "assets/rdx-verified.jpg",
+      "required": false
+    },
+    "HOW_TO_VERIFY": {
+      "description": "Tutorial video or channel link shown on verification screens.",
+      "required": false
+    },
+    "DEENDAYAL_VERIFIED_LOG": {
+      "description": "Channel ID where successful verification logs are sent.",
+      "required": false
+    },
+    "SHORTLINK_URL": {
+      "description": "Verification shortener domain without https://.",
+      "required": false
+    },
+    "SHORTLINK_API": {
+      "description": "API key for the verification shortener.",
+      "required": false
+    },
+    "ANTI_BYPASS_BASE_URL": {
+      "description": "Deployed RDX Anti-Bypass service URL.",
+      "value": "https://imperial-arlee-hassanaly4201-b12957fd.koyeb.app",
+      "required": false
+    },
+    "ANTI_BYPASS_API_KEY": {
+      "description": "Same value as API_KEY in the RDX Anti-Bypass service.",
+      "required": false
+    },
+    "ANTI_BYPASS_REQUEST_TIMEOUT": {
+      "description": "Maximum seconds to wait while creating a protected link.",
+      "value": "20",
+      "required": false
+    },
+    "SOURCE_CODE_LINK": {
+      "description": "Your repository URL. The original upstream source is used when left unchanged.",
+      "value": "https://github.com/Deendayal403/Deendayal_dhakad",
+      "required": false
+    }
+  },
+  "addons": [],
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
+  ],
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "eco"
+    }
+  }
+}
